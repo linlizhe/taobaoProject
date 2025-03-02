@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.displayNone {
+  display: none;
+}
+
+.floatLeft {
+  float: left;
+}
+
+.fontSize0 {
+  font-size: 0;
+}
+
+.clearBoth::after {
+  content: '.';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/*# sourceMappingURL=index_common.css.map */

@@ -1,0 +1,200 @@
+@charset "utf-8";
+
+//外面的容器 guessYouLike高度不能写, 要由内容撑开, 后面连接数据库渲染好后 放进去 撑开高度.
+
+#guessYouLike {
+    //宽度自适应
+    // height: 300px;
+    margin-top: 1px;
+    // background-color: pink;
+    // width: calc(100% + 16px);
+}
+
+// 3.1 头部导航
+//给导航的父元素 改变类名时 添加的样式.
+// #guessYouLike .itemNavWrap{
+
+// }
+#guessYouLike .itemNavWrapActive {
+    padding-top: 56px;
+}
+
+#guessYouLike .itemNav {
+    //宽度自适应
+    // width: calc(100% - 16px);
+    // width: 100%;
+    height: 40px;
+    padding: 8px 0;
+    // background-color: lightblue;
+    margin-bottom: 8px;
+}
+
+#guessYouLike .itemNavActive {
+    height: 40px;
+    position: fixed;
+    top: 58px;
+    // left: 0;
+    background-color: white;
+    z-index: 1;
+    padding: 0 80px;
+    margin: 0;
+}
+
+#guessYouLike .itemNav ul {
+    //宽度自适应
+    display: flex;
+}
+
+#guessYouLike .itemNav li {
+    margin-right: 32px;
+    position: relative;
+}
+
+#guessYouLike .itemNav li a {
+    // display: inline-block;
+    width: 90px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: inherit;
+}
+
+#guessYouLike .itemNav li span {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+#guessYouLike .itemNav li img {
+    width: 24px;
+    height: 24px;
+    margin-right: 2px;
+}
+
+//ul下的1一级子元素active, 指的是li
+#guessYouLike .itemNav ul li.active {
+    color: rgb(255, 80, 0);
+    font-weight: bold;
+}
+
+//li里的active元素: 下边框线元素
+#guessYouLike .itemNav li .active {
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 38px;
+    background-color: rgb(255, 80, 0);
+}
+
+//3.2 产品列表
+// #guessYouLike .itemList {
+//     //宽度不固定, 滚轮事件 渲染数据, 高度会增加.
+// }
+// #guessYouLike .itemList {
+//     position: relative;
+//     // background-color: pink;
+// }
+
+#guessYouLike .itemList ul {
+    // position: absolute;
+    // top: 0;
+    width: calc(100% + 16px);
+    margin: 0 -8px;
+    display: none;
+}
+
+#guessYouLike .itemList ul.active {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#guessYouLike .itemList li {
+    box-sizing: border-box;
+    width: calc(100% / 6);
+    min-width: 208px;
+    flex-grow: 1;
+    padding: 0 8px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    // position: relative;
+}
+
+//borderWrap是li的边框.
+//改变borderWrap的类名 添加对应样式.
+#guessYouLike .itemList ul .borderWrapActive {
+    // width: 100%;
+    border: 1px solid #ff5000;
+    border-radius: 12px;
+    position: absolute;
+    top: -4px;
+    left: -8px;
+}
+
+//商品是正方形.
+#guessYouLike .itemList li a {
+    // width: 100%;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#guessYouLike .itemList .backImage {
+    width: 100%;
+    // backImage里的img会有默认的下间距, 用fontsize0去掉, 不然img会让backImage的高度比预计的大.
+    font-size: 0;
+}
+
+//下面图片 写宽高100%可以达成目标效果, 但我不理解原因.
+#guessYouLike .itemList .backImage img {
+    width: 100%;
+    border-radius: 12px;
+    // visibility: hidden;
+}
+
+#guessYouLike .itemList a .itemName {
+    margin-top: 8px;
+    height: 48px;
+    overflow: hidden;
+}
+
+#guessYouLike .itemList .itemName img {
+    // width: 106.6px;
+    height: 16px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+#guessYouLike .itemList .itemName .titleWord {
+    font-size: 16px;
+    vertical-align: middle;
+    line-height: 24px;
+}
+
+#guessYouLike .itemList .priceInfo {
+    margin-top: 8px;
+    color: #ff5000;
+}
+
+#guessYouLike .itemList .priceInfo p {
+    height: 14px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+#guessYouLike .itemList .priceInfo .price {
+    margin: 4px 0 8px 0;
+    display: flex;
+}
+
+#guessYouLike .itemList .price .s1 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-right: 2px;
+    align-self: flex-end;
+}
+
+#guessYouLike .itemList .price .s2 {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: bold;
+}

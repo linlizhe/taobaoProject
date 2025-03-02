@@ -1,0 +1,383 @@
+@charset "utf-8";
+
+//logo
+#logoAndSearchWrap {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoAndSearchWrap .content {
+    width: 1552px;
+    height: 44px;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logoWrap img {
+    height: 100%;
+}
+
+#logoAndSearchWrap .searchWrap {
+    width: 368px;
+    height: 100%;
+    // background-color: pink;
+}
+
+.searchWrap form {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ebebeb;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchWrap form input {
+    outline: none;
+    border: none;
+    width: 133px;
+    height: 16px;
+    padding: 9px 36px 9px 0;
+    text-indent: 12px;
+    background-color: transparent;
+}
+
+.icon_camera {
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+
+.searchWrap form .btnWrap {
+    width: 148px;
+    height: 32px;
+    display: flex;
+    margin-right: 8px;
+    // background-color: lightblue;
+}
+
+.searchWrap form .btnWrap a {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    font-size: 14px;
+    line-height: 32px;
+    text-align: center;
+}
+
+.searchWrap form .btnWrap .searchItem {
+    background-color: #ff5000;
+    color: white;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.searchWrap form .btnWrap .searchShop {
+    background-color: #fff1eb;
+    color: #ff5000;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+#logoAndSearchWrap h1 {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+#logoAndSearchWrap .logoWrap span {
+    // display: inline-block;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #ff5000;
+}
+
+#logoAndSearchWrap .logoWrap a {
+    height: 100%;
+    margin-right: 16px;
+}
+
+//main
+#main {
+    width: 1600px;
+    padding: 0 80px;
+    margin: 0 auto;
+    // height: 500px;
+    // background-color: pink;
+}
+
+#main .header {
+    width: 1192px;
+    height: 112px;
+}
+
+#main .header .titleWrap {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+#main .header .titleWrap span {
+    font-size: 16px;
+    line-height: 48px;
+}
+
+#main .header .btnWrap {
+    height: 32px;
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+#main .header .btnWrap .chooseAllWrap {
+    display: flex;
+    align-items: center;
+}
+
+#main .chooseAllWrap span {
+    padding: 0 16px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+//所有Input都是勾选框, 一样的样式.
+#main input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#main .header .btnWrap .delete {
+    width: 40px;
+    line-height: 24px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+//购物车商品详情.
+#main .itemWrap {
+    width: 1192px;
+    // background-color: lightblue;
+}
+
+#main .itemWrap .item {
+    height: 163px;
+    margin-bottom: 16px;
+    border-top: 1px solid #000;
+    display: flex;
+    align-items: center;
+}
+
+#main .checkBtnWrap {
+    width: 20px;
+    height: 20px;
+    margin-right: 16px;
+}
+
+#main .picWrap {
+    width: 96px;
+    height: 96px;
+    margin-right: 16px;
+}
+
+#main .picWrap img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+#main .nameWrap {
+    width: 500px;
+    height: 96px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+#main .speciWrap {
+    width: 132px;
+    height: 96px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+#main .priceWrap {
+    width: 148px;
+    height: 96px;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+#main .priceWrap span {
+    font-size: 14px;
+    line-height: 1;
+    font-weight: bold;
+    color: #ff5000;
+}
+
+#main .quantityWrap {
+    // width: 104px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+}
+
+#main .quantityWrap button {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background-color: white;
+    border: 1px solid #7a7a7a;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#main .quantityWrap button.reduce {
+    cursor: not-allowed;
+}
+
+#main .quantityWrap input {
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    line-height: 30;
+    outline: none;
+    border: none;
+    border: 1px solid #7a7a7a;
+    border-left: 0;
+    border-right: 0;
+    cursor: auto;
+}
+
+#main .delBtnWrap {
+    font-size: 14px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+//结算
+#totalPriceWrap {
+    width: 360px;
+    height: 313px;
+    border-radius: 12px;
+    position: fixed;
+    top: 110px;
+    right: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #000;
+    background-color: white;
+}
+
+#totalPriceWrap .titleWrap {
+    width: 326px;
+    height: 24px;
+    padding: 12px 16px 20px 16px;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#totalPriceWrap .content {
+    width: 100%;
+    height: 140px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    position: relative;
+}
+
+#totalPriceWrap .content section.wordWrap {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    text-align: center;
+    line-height: 140px;
+    font-weight: bold;
+    color: #ff5000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    // background-color: red;
+}
+
+#totalPriceWrap .content section.imgWrap {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    background-color: white;
+    overflow: auto;
+}
+
+#totalPriceWrap .content section.imgWrap img {
+    flex-shrink: 0;
+    width: 76px;
+    height: 76px;
+    // margin-bottom: 8px;
+    margin: 0 0 8px 8px;
+    border-radius: 8px;
+}
+
+#totalPriceWrap .totalPrice {
+    width: 326px;
+    // height: 24px;
+    padding: 12px 16px 20px 16px;
+    // line-height: 24px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+#totalPriceWrap .totalPrice>div {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#totalPriceWrap .totalPrice>div .priceWrap {
+    color: #ff5000;
+    display: flex;
+    align-items: center;
+}
+
+#totalPriceWrap .totalPrice>div span {
+    line-height: 1;
+}
+
+#totalPriceWrap .totalPrice button {
+    width: 100%;
+    height: 48px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 48px;
+    text-align: center;
+    background-color: #ff5000;
+    color: white;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+}

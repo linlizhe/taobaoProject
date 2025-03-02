@@ -1,0 +1,491 @@
+@charset "utf-8";
+$ft12: 12px;
+$ft14: 14px;
+$ft16: 16px;
+$ft20: 20px;
+$primaryColor: #ff5000;
+
+#container #layout .searchWrapActive {
+    width: 1600px;
+    padding-top: 96px;
+    margin: 0 auto;
+    // visibility: hidden;
+}
+
+//滚动条下滑一定程度后 改变的搜索框容器, 以及里面元素的样式
+#container #layout #changeSearch {
+    box-sizing: border-box;
+    // width: 1760px;
+    height: 58px;
+    padding: 7px 80px;
+    margin: 0 auto;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 5;
+    background-color: white;
+}
+
+//改变后的淘宝logo的容器的样式.
+#changeSearch #logo {
+    width: 240px;
+    height: 42px;
+    margin: 0 8px;
+}
+
+//改变样式后, 热搜词隐藏.
+#changeSearch .hotWord {
+    display: none;
+}
+
+//改变样式后,右边的图片隐藏
+#changeSearch .rightPic {
+    display: none;
+}
+
+#changeSearch #logo a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url('https://img.alicdn.com/imgextra/i4/O1CN01GWGMXq1tQQE5iilau_!!6000000005896-1-tps-960-288.gif') no-repeat 0 0;
+    background-size: contain;
+}
+
+#changeSearch #logo a h1 {
+    text-indent: -9999px;
+}
+
+// 1.2 中间搜索
+#changeSearch .searchBox {
+    max-width: 1056px;
+    min-width: 560px;
+    //左右两边的图片占的位置是固定的,共256*2,且图片和中间搜索内容的间距也是固定的,共32px;
+    width: calc(100% - 256px * 2 - 32px);
+    // width: 1056px;
+    height: 44px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+//给searchBox下的 第一级子元素 变成 行内块, 横着排.
+.searchBox>div {
+    display: inline-block;
+}
+
+//1.2.1 文字搜索
+.searchBox .searchByWriting {
+    box-sizing: border-box;
+    max-width: 948px;
+    min-width: 448px;
+    width: calc(100% - 108px);
+    height: 44px;
+    border: 2px solid #ff5000;
+    border-radius: 12px;
+    font-size: $ft16;
+    position: relative;
+}
+
+//1.2.1.1 左边的 tab切换
+.searchBox .searchByWriting .tabChange {
+    height: 36px;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    z-index: 1;
+}
+
+.searchBox .searchByWriting .tabChange ul {
+    height: 100%;
+    overflow: hidden;
+}
+
+.searchBox .searchByWriting .tabChange .li1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchByWriting .tabChange .li1 span {
+    font-size: 14px;
+    line-height: 36px;
+    margin-right: 3px;
+}
+
+.searchByWriting .tabChange .icon_arrow {
+    width: 8px;
+    height: 8px;
+}
+
+.searchByWriting .tabChange ul li {
+    width: 40px;
+    padding: 0 16px;
+    height: 36px;
+    line-height: 36px;
+}
+
+//显示的tab选项背景是白色.
+.searchByWriting .tabChange ul .bgcWhite {
+    background-color: white;
+}
+
+//鼠标经过tab切换时显示可切换的选项
+.searchByWriting .tabChange ul:hover {
+    overflow: visible;
+}
+
+//1.2.1.2 中间的 表单
+.searchByWriting form {
+    width: 100%;
+    height: 100%;
+}
+
+//tab切换右边有条 竖线(分隔线)
+.searchByWriting form .splitLine {
+    width: 1px;
+    height: 12px;
+    background-color: rgba($color: #7a7a7a, $alpha: 0.4);
+    position: absolute;
+    left: 72px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+//文本输入框
+.searchByWriting form .textInputBox {
+    //input的位置在 左边分隔线 的右边1px的位置, 分隔线的定位left是73, 分隔线自身是1px, 所以计算input宽度时要减去74px.
+    //form宽度跟父元素searchByWriting一样, input的宽度是: form宽度-74px-右边按钮宽度.
+
+    //说明宽度的计算: 100%表示 跟父元素earchByWriting的宽度一样, 72和2px分别是 右边按钮的宽度 和按钮的定位right2px,76px 一开始不是76, 是左边分隔线的定位left 加上分隔线自身的大小, 但实际效果 不够, 慢慢调整成76, 接近淘宝的input.
+    width: calc(100% - 76px - 72px - 2px);
+    height: 34px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.searchByWriting form .textInputBox input {
+    width: calc(100% - 36px);
+    height: 16px;
+    padding: 9px 36px 9px 0;
+    border: 0;
+    outline: none;
+    text-indent: 10px;
+    font-size: 16px;
+}
+
+
+//搜索按钮
+.searchByWriting form .buttonWrap {
+    height: 36px;
+    position: absolute;
+    right: 2px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+.searchByWriting form .buttonWrap button {
+    width: 72px;
+    height: 36px;
+    background-color: rgb(255, 80, 0);
+    font-size: 16px;
+    //一开始我把行高设置的跟高度一样, 让文字垂直居中,但跟淘宝里的不一样, 应该是淘宝的里没有居中,然后行高37 才跟淘宝的一样.
+    line-height: 37px;
+    // text-align: center;
+    border: 0;
+    border-radius: 8px;
+    display: block;
+    color: white;
+    outline: none;
+}
+
+//搜索框里默认显示的文字
+.searchByWriting form .placeHolder {
+    width: 116px;
+    height: 38px;
+    position: absolute;
+    top: 2px;
+    left: 86px;
+    opacity: .5;
+    overflow: hidden;
+    // background-color: pink;
+}
+
+//让ul向上移动改变显示的文字
+.searchByWriting form .placeHolder ul {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    // transition: .3s;
+    // top: 0;
+    // left: 0;
+}
+
+form .placeHolder ul li {
+    height: 100%;
+    font-size: 14px;
+    line-height: 38px;
+    text-align: left;
+}
+
+
+.searchByWriting .hotWord a {
+    line-height: 16px;
+    font-size: 12px;
+    margin: 0 8px 12px 0;
+    color: rgb(122, 122, 122);
+}
+
+//前3个热搜词是红色
+.searchByWriting .hotWord .colorRed {
+    color: #f52743;
+}
+
+//鼠标经过热搜词时改变颜色.
+.searchByWriting .hotWord a:hover {
+    color: $primaryColor;
+}
+
+// 1.2.2 图片搜索
+.searchBox .searchByPicWrap {
+    width: 100px;
+    height: 44px;
+    background-color: #fff1eb;
+    margin-left: 8px;
+    border-radius: 10px;
+    //若没有vertical-align: top; 图片搜索会下移, 我猜测原因是默认有 基线对齐, 该元素跟左边的 热搜词 对齐了.
+    vertical-align: top;
+    cursor: pointer;
+    position: relative;
+}
+
+// 1.2.2.1 搜同款
+.searchBox .searchByPicWrap .searchByPic {
+    width: 80px;
+    height: 100%;
+    padding: 0 12px 0 8px;
+    font-size: 0;
+}
+
+//图片搜索里 照相机图标的样式
+.searchBox .searchByPicWrap .searchByPic .icon_camera {
+    width: 28px;
+    height: 28px;
+    color: #ff5000;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+.searchBox .searchByPicWrap .searchByPic span {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ff5000;
+    line-height: 44px;
+    vertical-align: middle;
+}
+
+// 1.2.2.2 鼠标经过图片搜索时 下面出现的提示
+.searchByPicWrap .tipWordWrap {
+    position: absolute;
+    top: 44px;
+    // display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 12px;
+    background-color: rgb(31, 31, 31);
+    border-radius: 8px;
+    top: 60px;
+    left: 50%;
+    translate: -50% 0;
+    display: none;
+}
+
+.searchByPicWrap .tipWordWrap img {
+    width: 16px;
+    height: 8px;
+    position: absolute;
+    top: -7px;
+}
+
+.searchByPicWrap .tipWordWrap span {
+    font-size: 14px;
+    line-height: 22px;
+    color: white;
+    white-space: nowrap;
+}
+
+//1.2.2.3 点击搜同款 下面出现上传图片的界面uploadPic
+.searchBox .searchByPicWrap .uploadPic {
+    width: 240px;
+    height: 229px;
+    background-color: white;
+    position: absolute;
+    top: 56px;
+    left: -90px;
+    flex-direction: column;
+    align-items: center;
+    // display: flex;
+    display: none;
+}
+
+
+
+//上传图片界面, 第一行文字和关闭按钮
+.searchByPicWrap .uploadPic .title {
+    width: 210px;
+    height: 20px;
+    margin: 12px 0 13px 0;
+    padding: 0 12px 0 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+//文字
+.searchByPicWrap .uploadPic .title span {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+//关闭按钮
+.searchByPicWrap .uploadPic .title img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+//上传图片界面, 中间的 文字和图片样式
+.searchByPicWrap .uploadPic .picPlace {
+    width: 208px;
+    height: 120px;
+    border: 1px dashed #dadde0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(141, 155, 168);
+    position: relative;
+}
+
+//innerBox元素的作用: 跟js配合, 让进度条的缓冲运动 从左边向右延伸, 而不是从中间开始.
+.uploadPic .picPlace .innerBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.uploadPic .picPlace .innerBox .progressBar {
+    width: 0;
+    background-color: #ff5000;
+    border-radius: 8px;
+    margin-top: 6px;
+}
+
+.searchByPicWrap .uploadPic .picPlace .originalImg {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 4px;
+    align-self: center;
+}
+
+.searchByPicWrap .uploadPic .picPlace span {
+    font-size: 12px;
+    line-height: 12px;
+    align-self: center;
+}
+
+.searchByPicWrap .uploadPic .picPlace .itemPic {
+    max-width: 206px;
+    max-height: 118px;
+    height: auto;
+}
+
+//上传图片界面, 有3个按钮, 上传按钮, 搜索按钮, 重试按钮, 不同情况显示不同的按钮
+//第一个 上传按钮
+.searchByPicWrap .uploadPic .picPlace .uploadbtn {
+    width: 56px;
+    height: 14px;
+    padding: 9px 12px;
+    border: 1px solid #dadde0;
+    border-radius: 4px;
+    position: absolute;
+    top: 133px;
+    left: 50%;
+    translate: -50% 0;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: rgb(255, 80, 0);
+    cursor: pointer;
+}
+
+.uploadPic .picPlace .uploadbtn:hover {
+    background-color: rgb(243, 246, 248);
+}
+
+//搜索按钮
+.searchByPicWrap .uploadPic .picPlace .searchBtn {
+    width: 84px;
+    height: 14px;
+    padding: 9px 12px;
+    border: 1px solid #dadde0;
+    border-radius: 4px;
+    position: absolute;
+    top: 133px;
+    left: 50%;
+    translate: -50% 0;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: white;
+    background-color: rgb(255, 80, 0);
+    cursor: pointer;
+    display: none;
+}
+
+//重试按钮
+.searchByPicWrap .uploadPic .picPlace .retryBtn {
+    width: 56px;
+    height: 14px;
+    padding: 9px 12px;
+    border: 1px solid #dadde0;
+    border-radius: 4px;
+    position: absolute;
+    top: 133px;
+    left: 50%;
+    translate: -50% 0;
+    font-size: 14px;
+    line-height: 14px;
+    text-align: center;
+    color: rgb(255, 80, 0);
+    cursor: pointer;
+    display: none;
+}
+
+.uploadPic .picPlace .retryBtn:hover {
+    background-color: rgb(243, 246, 248);
+}
+
+.uploadPic .picPlace input {
+    display: none;
+}
+
+
+#changeSearch .rightPic a {
+    display: inline-block;
+    width: 240px;
+    height: 72px;
+}
+
+#changeSearch .rightPic a img {
+    width: 100%;
+    height: 100%;
+}

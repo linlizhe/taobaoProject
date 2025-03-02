@@ -1,0 +1,159 @@
+#guessYouLike {
+  margin-top: 1px;
+}
+
+#guessYouLike .itemNavWrapActive {
+  padding-top: 56px;
+}
+
+#guessYouLike .itemNav {
+  height: 40px;
+  padding: 8px 0;
+  margin-bottom: 8px;
+}
+
+#guessYouLike .itemNavActive {
+  height: 40px;
+  position: fixed;
+  top: 58px;
+  background-color: white;
+  z-index: 1;
+  padding: 0 80px;
+  margin: 0;
+}
+
+#guessYouLike .itemNav ul {
+  display: flex;
+}
+
+#guessYouLike .itemNav li {
+  margin-right: 32px;
+  position: relative;
+}
+
+#guessYouLike .itemNav li a {
+  width: 90px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  color: inherit;
+}
+
+#guessYouLike .itemNav li span {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+#guessYouLike .itemNav li img {
+  width: 24px;
+  height: 24px;
+  margin-right: 2px;
+}
+
+#guessYouLike .itemNav ul li.active {
+  color: #ff5000;
+  font-weight: bold;
+}
+
+#guessYouLike .itemNav li .active {
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  top: 38px;
+  background-color: #ff5000;
+}
+
+#guessYouLike .itemList ul {
+  width: calc(100% + 16px);
+  margin: 0 -8px;
+  display: none;
+}
+
+#guessYouLike .itemList ul.active {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#guessYouLike .itemList li {
+  box-sizing: border-box;
+  width: calc(100% / 6);
+  min-width: 208px;
+  flex-grow: 1;
+  padding: 0 8px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+#guessYouLike .itemList ul .borderWrapActive {
+  border: 1px solid #ff5000;
+  border-radius: 12px;
+  position: absolute;
+  top: -4px;
+  left: -8px;
+}
+
+#guessYouLike .itemList li a {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#guessYouLike .itemList .backImage {
+  width: 100%;
+  font-size: 0;
+}
+
+#guessYouLike .itemList .backImage img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+#guessYouLike .itemList a .itemName {
+  margin-top: 8px;
+  height: 48px;
+  overflow: hidden;
+}
+
+#guessYouLike .itemList .itemName img {
+  height: 16px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+#guessYouLike .itemList .itemName .titleWord {
+  font-size: 16px;
+  vertical-align: middle;
+  line-height: 24px;
+}
+
+#guessYouLike .itemList .priceInfo {
+  margin-top: 8px;
+  color: #ff5000;
+}
+
+#guessYouLike .itemList .priceInfo p {
+  height: 14px;
+  font-size: 14px;
+  line-height: 1;
+}
+
+#guessYouLike .itemList .priceInfo .price {
+  margin: 4px 0 8px 0;
+  display: flex;
+}
+
+#guessYouLike .itemList .price .s1 {
+  font-size: 16px;
+  line-height: 20px;
+  margin-right: 2px;
+  align-self: flex-end;
+}
+
+#guessYouLike .itemList .price .s2 {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=index_container_3_guess.css.map */

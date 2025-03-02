@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    // background-color: #f0eff2;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+//头部导航
+#header {
+    min-width: 1200px;
+    height: 35px;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    justify-content: center;
+    // background-color: pink;
+}
+
+#header .siteNav {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0 80px;
+    max-width: 1760px;
+    min-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    // background-color: red;
+}
+
+#header .siteNav ul {
+    display: flex;
+    font-size: 12px;
+    line-height: 35px;
+}
+
+.icon {
+    width: 8px;
+    height: 8px;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+#header .siteNav ul.left li {
+    margin-right: 16px;
+}
+
+#header .siteNav ul.right li {
+    margin-left: 16px;
+}
+
+//用户名
+.li_usernameWrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.li_usernameWrap .addColor {
+    color: #ff5000;
+    margin-right: 8px;
+}
+
+.li_usernameWrap a.a_username {
+    display: none;
+    max-width: 70px;
+    margin-right: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.li_usernameWrap .icon_arrow {
+    display: none;
+}
+
+#header .userBox {
+    width: 184px;
+    height: 96px;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #f0eff2;
+    position: absolute;
+    top: 36px;
+    left: -16px;
+    z-index: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+
+#header .userBox .top {
+    display: flex;
+    height: 48px;
+}
+
+#header .userBox .profilePicWrap {
+    width: 48px;
+    height: 48px;
+}
+
+#header .userBox .profilePicWrap img {
+    width: 100%;
+    height: 100%;
+}
+
+#header .userBox .userManageWrap {
+    margin-left: 8px;
+    width: calc(100% - 48px - 10px);
+    height: 100%;
+    line-height: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    // flex-direction: column;
+}
+
+#header .userBox .userManageWrap span {
+    width: 100%;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    font-weight: bold;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+}
+
+#header .userManageWrap a {
+    font-size: 12px;
+    margin: 0;
+    line-height: 12px;
+    color: #000;
+}
+
+#header .userManageWrap a.manage::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 0 8px;
+    overflow: hidden;
+    // visibility: hidden;
+    background-color: #000;
+}
+
+#header .userBox .bottom {
+    height: 30px;
+    border: 1px solid #f0eff2;
+    border-radius: 12px;
+}
+
+#header .userBox .bottom a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: #000;
+    margin: 0;
+}

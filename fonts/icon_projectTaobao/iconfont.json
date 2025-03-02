@@ -1,0 +1,163 @@
+{
+  "id": "4768484",
+  "name": "taobao",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4175511",
+      "name": "下箭头",
+      "font_class": "xiajiantou",
+      "unicode": "eb6d",
+      "unicode_decimal": 60269
+    },
+    {
+      "icon_id": "4175512",
+      "name": "上箭头",
+      "font_class": "shangjiantou",
+      "unicode": "eb6e",
+      "unicode_decimal": 60270
+    },
+    {
+      "icon_id": "29290599",
+      "name": "淘宝",
+      "font_class": "taobao",
+      "unicode": "100c0",
+      "unicode_decimal": 65728
+    },
+    {
+      "icon_id": "39880633",
+      "name": "淘宝店铺",
+      "font_class": "taobaodianpu",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    },
+    {
+      "icon_id": "6536724",
+      "name": "信息",
+      "font_class": "xinxi",
+      "unicode": "e65e",
+      "unicode_decimal": 58974
+    },
+    {
+      "icon_id": "630094",
+      "name": "向右箭头",
+      "font_class": "xiangyoujiantou",
+      "unicode": "e65f",
+      "unicode_decimal": 58975
+    },
+    {
+      "icon_id": "29865219",
+      "name": "右箭头",
+      "font_class": "youjiantou",
+      "unicode": "e686",
+      "unicode_decimal": 59014
+    },
+    {
+      "icon_id": "6775641",
+      "name": "爱心 _实心",
+      "font_class": "aixin_shixin",
+      "unicode": "eca1",
+      "unicode_decimal": 60577
+    },
+    {
+      "icon_id": "7702727",
+      "name": "吐司",
+      "font_class": "tusi",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "7847523",
+      "name": "外套",
+      "font_class": "waitao",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "15463143",
+      "name": "水杯,保温杯,杯子,cup,coffee,drink,",
+      "font_class": "shuibei-baowenbei-beizi",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "24835413",
+      "name": "抽纸盒",
+      "font_class": "chouzhihe-copy-copy-copy-copy",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "28480564",
+      "name": "羽毛球",
+      "font_class": "yumaoqiu",
+      "unicode": "e665",
+      "unicode_decimal": 58981
+    },
+    {
+      "icon_id": "4608968",
+      "name": "时钟",
+      "font_class": "shizhong",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "200968",
+      "name": "3.1店铺",
+      "font_class": "31dianpu",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "785015",
+      "name": "店铺",
+      "font_class": "dianpu",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "1236807",
+      "name": "收藏夹",
+      "font_class": "02",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "15714215",
+      "name": "电脑",
+      "font_class": "diannao",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "2161",
+      "name": "收藏夹",
+      "font_class": "shoucangjia",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "624530",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "2076220",
+      "name": " 下拉箭头小",
+      "font_class": "xialajiantouxiao",
+      "unicode": "e87e",
+      "unicode_decimal": 59518
+    },
+    {
+      "icon_id": "27742123",
+      "name": "照相机",
+      "font_class": "zhaoxiangji",
+      "unicode": "e64d",
+      "unicode_decimal": 58957
+    }
+  ]
+}

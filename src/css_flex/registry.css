@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#header {
+  min-width: 1200px;
+  height: 35px;
+  border-bottom: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+}
+
+#header .siteNav {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0 80px;
+  max-width: 1760px;
+  min-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#header .siteNav ul {
+  display: flex;
+  font-size: 12px;
+  line-height: 35px;
+}
+
+#header .siteNav ul .icon {
+  width: 8px;
+  height: 8px;
+  fill: currentColor;
+  overflow: hidden;
+}
+
+#header .siteNav ul.left li {
+  margin-right: 16px;
+}
+
+#header .siteNav ul.left .A_color {
+  color: #ff5000;
+}
+
+#header .siteNav ul.right li {
+  margin-left: 16px;
+}
+
+.formTitle {
+  margin: 0 auto;
+  width: 990px;
+  height: 43px;
+  line-height: 43px;
+  display: flex;
+}
+
+.formTitle h1 {
+  width: 106px;
+  height: 43px;
+}
+
+.formTitle h1 a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://gw.alicdn.com/tfs/TB176rg4VP7gK0jSZFjXXc5aXXa-286-118.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.formTitle h2 {
+  font-size: 22px;
+  font-weight: normal;
+}
+
+#registryForm {
+  height: 463px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#registryForm fieldset {
+  font-size: 14px;
+  border: none;
+}
+
+#registryForm p {
+  margin-top: 10px;
+}
+
+#registryForm span {
+  display: block;
+  margin-left: 70px;
+  width: 308px;
+  height: 19px;
+  text-align: left;
+  line-height: 19px;
+}
+
+#registryForm label {
+  display: inline-block;
+  width: 56px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+#registryForm input {
+  width: 308px;
+  height: 36px;
+  outline: none;
+}
+
+#registryForm .submitBtn {
+  border: none;
+  color: white;
+  background-image: linear-gradient(90deg, #ff9900, #ff5000);
+  opacity: .5;
+  cursor: pointer;
+}
+
+#registryForm .protocolWrap {
+  display: flex;
+  margin-top: 20px;
+  justify-content: flex-end;
+}
+
+#registryForm .protocolWrap label {
+  flex-shrink: 0;
+}
+
+#registryForm .protocolWrap .checkboxWrap {
+  flex-shrink: 0;
+}
+
+#registryForm .protocolWrap .protocolContent {
+  flex-shrink: 0;
+  width: 295px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+#registryForm .protocolWrap .checkboxWrap {
+  width: 16px;
+  height: 16px;
+  position: relative;
+}
+
+#registryForm .protocolWrap .checkbox {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  z-index: 2;
+}
+
+#registryForm .protocolWrap .checkboxWrap section {
+  width: 16px;
+  height: 16px;
+  background-color: #fd6020;
+  background-image: url("https://gw.alicdn.com/imgextra/i2/O1CN01fio0bI20MwAI50Hjs_!!6000000006836-2-tps-40-40.png");
+  background-size: 16px 16px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.protocolWrap span.protocolContent {
+  font-size: 12px;
+  width: 295px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#registryForm .protocolWrap a {
+  color: #fd6020;
+}
+
+/*# sourceMappingURL=registry.css.map */

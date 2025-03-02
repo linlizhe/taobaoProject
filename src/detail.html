@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情页</title>
+    <link rel="stylesheet" href="./css_flex/detail.css">
+    <script src="./script/require.js" defer async="true" data-main="./script/main.js" id="currentPage"
+        data-page="detail_module"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="siteNav">
+            <ul class="left">
+                <li class="li_usernameWrap">
+                    <a href="./login.html" class="addColor">亲，请登录</a>
+
+                    <a href="./registry.html">免费注册</a>
+                    <a href="javascript:;" class="a_username">用户名</a>
+                    <svg class="icon icon_arrow" aria-hidden="true">
+                        <use xlink:href="#icon-xialajiantouxiao"></use>
+                    </svg>
+
+                    <div class="userBox">
+                        <div class="top">
+                            <div class="profilePicWrap">
+                                <img src="https://img.alicdn.com/sns_logo/TB1ZbSH4AL0gK0jSZFtXXXQCXXa-240-240.png"
+                                    alt="">
+                            </div>
+                            <div class="userManageWrap">
+                                <span>用户名</span>
+                                <a href="javascript:;" class="manage">账号管理</a>
+                                <a href="javascript:;" class="quit">退出</a>
+                            </div>
+                        </div>
+
+                        <div class="bottom">
+                            <a href="javascript:;">查看你的专属权益</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="javascript:;">网页无障碍</a>
+                </li>
+            </ul>
+
+            <ul class="right">
+                <li>
+                    <a href="javascript:;">淘宝网首页</a>
+
+                </li>
+                <li>
+                    <a href="javascript:;">已买到的宝贝</a>
+
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>我的淘宝</span>
+                        <svg class="icon icon_arrow" aria-hidden="true">
+                            <use xlink:href="#icon-xialajiantouxiao"></use>
+                        </svg>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="cart.html" target="_blank">
+                        <svg class="icon icon_cart" aria-hidden="true">
+                            <use xlink:href="#icon-gouwuche"></use>
+                        </svg>
+                        <span>购物车</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <svg class="icon icon_collection" aria-hidden="true">
+                            <use xlink:href="#icon-shoucangjia"></use>
+                        </svg>
+                        <span>收藏夹</span>
+                        <svg class="icon icon_arrow" aria-hidden="true">
+                            <use xlink:href="#icon-xialajiantouxiao"></use>
+                        </svg>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>免费开店</span>
+                        <svg class="icon icon_arrow" aria-hidden="true">
+                            <use xlink:href="#icon-xialajiantouxiao"></use>
+                        </svg>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>千牛卖家中心</span>
+                        <svg class="icon icon_arrow" aria-hidden="true">
+                            <use xlink:href="#icon-xialajiantouxiao"></use>
+                        </svg>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>帮助中心</span>
+                        <svg class="icon icon_arrow" aria-hidden="true">
+                            <use xlink:href="#icon-xialajiantouxiao"></use>
+                        </svg>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="logoAndSearchWrap">
+        <div class="content">
+            <div class="logoWrap">
+                <h1>
+                    <a href="javascript:;">
+                        <img src="https://gw.alicdn.com/imgextra/i1/O1CN01z163bz1lHF5yQ50CC_!!6000000004793-2-tps-172-108.png"
+                            alt="">
+                    </a>
+                </h1>
+            </div>
+
+            <div class="searchWrap">
+                <form action="">
+                    <input type="text" placeholder="商品名">
+                    <svg class="icon icon_camera" aria-hidden="true">
+                        <use xlink:href="#icon-zhaoxiangji"></use>
+                    </svg>
+
+                    <div class="btnWrap">
+                        <a href="javascript:;" class="searchItem">搜索</a>
+                        <a href="javascript:;" class="searchShop">搜本店</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="main">
+        <div class="shopWrap">
+            <a href="javascript:;" class="shopInfo">
+                <img src="https://img.alicdn.com/imgextra/i4/2616970884/O1CN01TTNdAx1IOv5i2sa7l_!!2616970884.jpg_110x110q30.jpg_.webp"
+                    alt="">
+                <span>店铺名</span>
+            </a>
+
+
+            <div class="right">
+                <a href="javascript:;">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-taobao"></use>
+                    </svg>
+                    <span>联系客服</span>
+                </a>
+
+                <a href="javascript:;">
+                    <svg class="icon" aria-hidden="true">
+                        <use xlink:href="#icon-taobaodianpu"></use>
+                    </svg>
+                    <span>进入店铺</span>
+                </a>
+
+            </div>
+        </div>
+
+        <div class="itemWrap">
+            <div class="content">
+                <div class="itemMainContent">
+                    <div class="picWrap">
+                        <div class="smallPicWrap">
+                            <ul class="picList"></ul>
+
+                            <div class="btnWrap">
+                                <section class="lastBtnWrap">
+                                    <svg class="icon last" aria-hidden="true">
+                                        <use xlink:href="#icon-shangjiantou"></use>
+                                    </svg>
+                                </section>
+
+                                <section class="nextBtnWrap">
+                                    <svg class="icon next" aria-hidden="true">
+                                        <use xlink:href="#icon-xiajiantou"></use>
+                                    </svg>
+                                </section>
+
+                            </div>
+                        </div>
+
+                        <div class="bigPicWrap">
+                            <div class="imgWrap">
+                                <section class="imgSec"></section>
+                                <section class="sf"></section>
+                            </div>
+                            <div class="scale"></div>
+                        </div>
+                    </div>
+
+                    <div class="infoWrap">
+                        <div class="titleWrap">
+                            <h1></h1>
+                        </div>
+                        <div class="priceWrap">
+                            <span>¥</span>
+                            <span class="price"></span>
+                        </div>
+                        <div class="deliveryWrap">
+                            <div class="title">
+                                <span>配送</span>
+                            </div>
+                            <div class="originPlaceWrap">
+                                上海
+                                <span>至</span>
+                            </div>
+                            <div class="deliveryPlaceWrap">
+                                <span>杭州</span>
+                            </div>
+                        </div>
+                        <div class="guarantee">
+                            <div class="title">
+                                <span>保障资质</span>
+                            </div>
+
+                            <div class="guaranteeCon">
+                                <span>破损包退 退货宝 不支持7天无理由退货</span>
+                            </div>
+                        </div>
+                        <div class="speci">
+                            <div class="title">
+                                <span>规格</span>
+                            </div>
+                        </div>
+                        <div class="quantity">
+                            <div class="title">
+                                <span>数量</span>
+                            </div>
+                            <div class="inputNum">
+                                <button class="reduce">-</button>
+                                <input type="text">
+                                <button class="increase">+</button>
+
+                            </div>
+                        </div>
+                        <div class="btnWrap">
+                            <button class="addCart">加入购物车</button>
+                            <button class="buy">立即购买</button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="detailInfoWrap">
+            <div class="navWrap">
+                <ul class="nav">
+                    <li class="active">
+                        <a href="javascript:;">用户评价</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">参数信息</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">图文详情</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">本店推荐</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">看了又看</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="detailInfo">
+                <div class="comment">
+                    <div class="title">
+                        <span>用户评价</span>
+                        <section class="issueMess">发布评论</section>
+                    </div>
+                    <div class="conWrap">
+                        <div class="commentCon">
+                            <div class="userWrap">
+                                <div class="headPic"></div>
+                                <div class="right">
+                                    <span class="username"></span>
+                                    <span class="commentDate"></span>
+                                </div>
+                            </div>
+                            <div class="message">
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="parameter">
+                    <div class="title">参数信息</div>
+                    <div class="conWrap"></div>
+
+                </div>
+                <div class="image_text">
+                    <div class="title">图文详情</div>
+                    <div class="conWrap"></div>
+
+                </div>
+                <div class="recommend">
+                    <div class="title">本店推荐</div>
+                    <div class="conWrap"></div>
+
+                </div>
+                <div class="browse">
+                    <div class="title">看了又看</div>
+                    <div class="conWrap"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="messageWrap">
+        <div class="messWrap">
+            <textarea name="" id=""></textarea>
+        </div>
+        <div class="messBtnWrap">
+            <section class="issue">发布评论</section>
+            <section class="close">关闭</section>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

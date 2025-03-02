@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="./css_flex/cart_header.css">
+    <link rel="stylesheet" href="./css_flex/cart_footer.css">
+    <link rel="stylesheet" href="./css_flex/cart_body.css">
+
+
+    <script src="./script/require.js" defer async="true" data-main="./script/main.js" id="currentPage"
+        data-page="cart_module"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="siteNav">
+            <ul class="left">
+                <li class="li_usernameWrap">
+                    <a href="./login.html" class="addColor">亲，请登录</a>
+
+                    <a href="./registry.html">免费注册</a>
+                    <a href="javascript:;" class="a_username">用户名</a>
+                    <svg class="icon icon_arrow" aria-hidden="true">
+                        <use xlink:href="#icon-xialajiantouxiao"></use>
+                    </svg>
+
+                    <div class="userBox">
+                        <div class="top">
+                            <div class="profilePicWrap">
+                                <img src="https://img.alicdn.com/sns_logo/TB1ZbSH4AL0gK0jSZFtXXXQCXXa-240-240.png"
+                                    alt="">
+                            </div>
+                            <div class="userManageWrap">
+                                <span>用户名</span>
+                                <a href="javascript:;" class="manage">账号管理</a>
+                                <a href="javascript:;" class="quit">退出</a>
+                            </div>
+                        </div>
+
+                        <div class="bottom">
+                            <a href="javascript:;">查看你的专属权益</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li>
+                    <a href="javascript:;">网页无障碍</a>
+                </li>
+            </ul>
+
+            <ul class="right">
+                <li>
+                    <a href="javascript:;">淘宝网首页</a>
+
+                </li>
+                <li>
+                    <a href="javascript:;">已买到的宝贝</a>
+
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>我的淘宝</span>
+                        <svg class="icon icon_arrow" aria-hidden="true">
+                            <use xlink:href="#icon-xialajiantouxiao"></use>
+                        </svg>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <svg class="icon icon_cart" aria-hidden="true">
+                            <use xlink:href="#icon-gouwuche"></use>
+                        </svg>
+                        <span>购物车</span>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <svg class="icon icon_collection" aria-hidden="true">
+                            <use xlink:href="#icon-shoucangjia"></use>
+                        </svg>
+                        <span>收藏夹</span>
+                        <svg class="icon icon_arrow" aria-hidden="true">
+                            <use xlink:href="#icon-xialajiantouxiao"></use>
+                        </svg>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>免费开店</span>
+                        <svg class="icon icon_arrow" aria-hidden="true">
+                            <use xlink:href="#icon-xialajiantouxiao"></use>
+                        </svg>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>千牛卖家中心</span>
+                        <svg class="icon icon_arrow" aria-hidden="true">
+                            <use xlink:href="#icon-xialajiantouxiao"></use>
+                        </svg>
+                    </a>
+
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>帮助中心</span>
+                        <svg class="icon icon_arrow" aria-hidden="true">
+                            <use xlink:href="#icon-xialajiantouxiao"></use>
+                        </svg>
+                    </a>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="logoAndSearchWrap">
+        <div class="content">
+            <div class="logoWrap">
+                <h1>
+                    <a href="index.html" target="_blank">
+                        <img src="https://gw.alicdn.com/imgextra/i2/O1CN0188c2Ev1uamjpGQBxv_!!6000000006054-2-tps-252-120.png"
+                            alt="">
+                    </a>
+                    <span>购物车</span>
+                </h1>
+            </div>
+
+            <div class="searchWrap">
+                <form action="">
+                    <input type="text" placeholder="商品名">
+                    <svg class="icon icon_camera" aria-hidden="true">
+                        <use xlink:href="#icon-zhaoxiangji"></use>
+                    </svg>
+
+                    <div class="btnWrap">
+                        <a href="javascript:;" class="searchItem">搜索</a>
+                        <a href="javascript:;" class="searchShop">搜本店</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="container">
+        <div id="main">
+            <div class="header">
+                <div class="titleWrap">
+                    <span></span>
+                </div>
+                <div class="btnWrap">
+                    <section class="chooseAllWrap">
+                        <input type="checkbox" class="checkbox checkAll">
+                        <span>全选</span>
+                    </section>
+                    <section class="delete">删除</section>
+                </div>
+
+            </div>
+
+            <div class="itemWrap"></div>
+
+        </div>
+    </div>
+
+    <div id="totalPriceWrap">
+        <div class="titleWrap">结算明细</div>
+        <div class="content">
+            <section class="wordWrap">选择商品查看实际价格</section>
+            <section class="imgWrap"></section>
+        </div>
+        <div class="totalPrice">
+            <div>
+                <span>合计:</span>
+                <div class="priceWrap">
+                    <span>¥</span>
+                    <span class="price">0</span>
+                </div>
+            </div>
+            <button>结算</button>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div class="top">
+            <p class="topTitle">Taobao | 淘宝</p>
+
+            <p>淘宝网是阿里巴巴集团旗下的国际化网络购物平台，淘宝网为消费者提供互动化、个性化的购物体验。消费者能够从<span>天猫</span>品牌旗舰店、淘宝直播间实物展示、网红主播评论区真实的买家秀获取相关度高的<span>商品</span>信息，也能通过淘宝百科学习生活知识，开启购物智慧之门，畅享美好生活。
+            </p>
+            <p>淘宝网页通过提供多样化的男装女装女鞋包包等商品和服务，为消费者提供各类<span>newbalance、converse、adidas、saucony</span>等
+                <span>运动鞋篮球鞋</span>扽购物体验。其中
+                <span>oppo、vivo、iphone16、电脑、音响、手机</span>等2025蛇年商品口碑更是赢得了热门口碑和评价。在满足了广大消费者的不同需求同时也为淘宝卖家和淘宝店铺提供了一个广阔的销售渠道。
+            </p>
+
+            <p>手机淘宝不定期推出专注于促销的电动车、婴儿奶粉、苹果电脑、夏普等精品类推荐。同时提供担保交易(先收货后付款)等安全交易保障服务，并由商家提供退货承诺、破损补寄等消费者保障服务，也可以联系淘宝客服让消费者安心购物的同时还能畅享购物乐趣。
+            </p>
+        </div>
+
+        <div class="bottom">
+            <section class="bottomSec1">
+                <div class="bottomSec1UlDiv">
+                    <ul>
+                        <li>规则协议</li>
+                        <li><a href="javascript:;">淘宝规则</a></li>
+                        <li><a href="javascript:;">平台服务协议</a></li>
+                    </ul>
+
+                    <ul>
+                        <li>新手上路</li>
+                        <li><a href="javascript:;">0元开店</a></li>
+                        <li><a href="javascript:;">天猫开店</a></li>
+                        <li><a href="javascript:;">商家服务</a></li>
+                    </ul>
+
+                    <ul>
+                        <li>付款方式</li>
+                        <li><a href="javascript:;">快捷支付</a></li>
+                        <li><a href="javascript:;">余额宝</a></li>
+                        <li><a href="javascript:;">蚂蚁花呗</a></li>
+                    </ul>
+
+                    <ul>
+                        <li>淘宝特色</li>
+                        <li><a href="javascript:;">旺旺/旺信</a></li>
+                        <li><a href="javascript:;">官方客服</a></li>
+                    </ul>
+                </div>
+
+                <ul class="brandUl">
+                    <li><a href="javascript:;">阿里巴巴集团</a></li>
+                    <li><a href="javascript:;">淘宝</a></li>
+                    <li><a href="javascript:;">天猫</a></li>
+                    <li><a href="javascript:;">1688</a></li>
+                    <li><a href="javascript:;">一淘</a></li>
+                    <li><a href="javascript:;">阿里健康</a></li>
+                    <li><a href="javascript:;">全球速卖通</a></li>
+                    <li><a href="javascript:;">阿里巴巴国际站</a></li>
+                    <li><a href="javascript:;">高德</a></li>
+                    <li><a href="javascript:;">飞猪</a></li>
+                    <li><a href="javascript:;">优酷</a></li>
+                    <li><a href="javascript:;">大麦</a></li>
+                    <li><a href="javascript:;">阿里影业</a></li>
+                    <li><a href="javascript:;">钉钉</a></li>
+                    <li><a href="javascript:;">支付宝</a></li>
+                    <li><a href="javascript:;">阿里妈妈</a></li>
+                    <li><a href="javascript:;">阿里云</a></li>
+                </ul>
+            </section>
+
+            <section class="bottomSec2">
+                <ul>
+                    <li><a href="javascript:;">关于淘宝</a></li>
+                    <li><a href="javascript:;">营销中心</a></li>
+                    <li><a href="javascript:;">廉政举报</a></li>
+                    <li><a href="javascript:;">开放平台</a></li>
+                    <li><a href="javascript:;">诚征英才</a></li>
+                    <li><a href="javascript:;">隐私权政策</a></li>
+                    <li><a href="javascript:;">法律声明</a></li>
+                    <li><a href="javascript:;">知识产权</a></li>
+
+                    <li>© 2003-现在 Taobao.com 版权所有</li>
+                    <li>增值电信业务经营许可证：浙B2-20080224</li>
+                    <li>增值电信业务经营许可证（跨地区）：B2-20150210</li>
+                    <li>浙网文【2022】0403-017号</li>
+
+                    <li>网络订餐服务第三方平台备案：浙网餐备2024A330000020</li>
+                    <li>
+                        浙江省网络食品销售第三方平台提供者备案：浙网食A33010001
+                    </li>
+                    <li>互联网药品信息服务资格证书（浙）-经营性-2023-0008</li>
+                    <li>短消息类服务接入代码使用证书：号【2016】00154-A01</li>
+                    <li>信息网络传播视听许可证：1109364号</li>
+                    <li>
+                        出版物网络交易平台服务经营备案号：新出发浙备字第2024004号
+                    </li>
+                    <li>
+                        药品网络交易第三方平台备案信息：（浙）网药平台备字【2023】第
+                    </li>
+                    <li>000016-000号</li>
+                    <li>
+                        <a href="javascript:;">浙公网安备33010002000078号</a>
+                    </li>
+                    <li><a href="javascript:;">浙B2-20080224-1</a></li>
+                    <li><a href="javascript:;">全国12315平台</a></li>
+                    <li>
+                        <a href="javascript:;">
+                            浙江省互联网违法和不良信息举报中心
+                        </a>
+                    </li>
+                    <li><a href="javascript:;">全网举报</a></li>
+                    <li><a href="javascript:;">涉企举报专区</a></li>
+
+
+                    <li>
+                        <a href="javascript:;">
+                            <img src="https://img.alicdn.com/imgextra/i2/O1CN0108Mv2B1VBiUZxdc4j_!!6000000002615-2-tps-30-30.png"
+                                alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="https://img.alicdn.com/imgextra/i3/O1CN01Q5eyfT1KawjDwueMh_!!6000000001181-2-tps-132-48.png"
+                                alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="https://img.alicdn.com/imgextra/i4/O1CN01Dc9PxV1XzlCMO1boO_!!6000000002995-2-tps-3456-864.png"
+                                alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="https://gw.alicdn.com/imgextra/i4/O1CN012YkS1S20pKuSLCT05_!!6000000006898-0-tps-720-280.jpg"
+                                alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="https://gw.alicdn.com/imgextra/i2/O1CN01pGmNhS1LbgnABvxrV_!!6000000001318-2-tps-170-20.png"
+                                alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="https://img.alicdn.com/imgextra/i4/O1CN01rjCXEO1yXoR5lsMZO_!!6000000006589-0-tps-198-40.jpg"
+                                alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <img src="https://gw.alicdn.com/imgextra/i1/O1CN01Hs1MVu1IDvM07YrGh_!!6000000000860-2-tps-293-143.png"
+                                alt="">
+                        </a>
+                    </li>
+                </ul>
+
+            </section>
+        </div>
+    </div>
+</body>
+
+
+
+</html>

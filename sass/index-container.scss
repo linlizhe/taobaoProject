@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+//除了头部导航, 靠页面右边的工具, 第一次进页面时底部出现的广告, 以外的内容都写在container的 layout元素里面.
+//有滚动条的情况下 container最大宽度是1899.
+#container {
+    width: 100%;
+    min-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+//notice是头部导航和container之间的 通告, 我为了尽量做到跟淘宝一样, 加了这一块, 只有宽度和背景颜色.
+
+//layout的样式.
+//淘宝的layout在container里水平居中, layout有左右padding, padding会变化, 宽度够时 padding80, 宽度在一定值以下时 变成48, 这个效果 只能在后面用js做, 我想到若 padding有max-paading这类属性的话 可能可以做这个效果, 但没有这个属性.
+#container #layout {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 80px;
+    max-width: 1760px;
+    // min-width: 1200px;
+}
+
+#container #layout.style2 {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 48px;
+    max-width: none;
+    min-width: 1200px;
+}

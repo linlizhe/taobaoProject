@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+//隐藏所有需要 先隐藏的元素
+.displayNone {
+    display: none;
+}
+
+//给需要浮动的元素 加浮动.
+.floatLeft {
+    float: left;
+}
+
+//去掉 行内块或行内元素之间的间距.
+.fontSize0 {
+    font-size: 0;
+}
+
+//解决高度塌陷的问题.
+.clearBoth::after {
+    content: '.';
+    display: block;
+    overflow: hidden;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+
+//一开始固定页面高度 产生滚动条, 后面可以去掉.
+
+body {
+    overflow-x: hidden;
+    // background-color: #f0eff2;
+    // background-color: red;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-start;
+}
+
+// #header,
+// #container {
+//     // height: 3000px;
+//     overflow: hidden;
+// }

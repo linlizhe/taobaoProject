@@ -1,0 +1,380 @@
+@charset "utf-8";
+$ft12: 12px;
+$ft14: 14px;
+$ft16: 16px;
+$ft20: 20px;
+$lineHeight: 35px;
+$primaryColor: #ff5000;
+$primaryFontColor: #6C6C6C;
+
+//一.头部网页导航
+#header {
+    width: 100%;
+    min-width: 1280px;
+    // header的总高度是 height35+底线1=36px, header里面的元素的高度都是35px;
+    height: 35px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    color: $primaryFontColor;
+    display: flex;
+    justify-content: center;
+}
+
+//大部分a的颜色, 少数不同的a颜色单独修改.
+#header a {
+    color: $primaryFontColor;
+}
+
+#header li.li_username {
+    position: relative;
+}
+
+#header a.a_username {
+    display: flex;
+    align-items: center;
+}
+
+#header a.a_username span {
+    display: inline-block;
+    max-width: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#header .userBox {
+    width: 184px;
+    height: 96px;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    position: absolute;
+    top: 36px;
+    left: -16px;
+    z-index: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+}
+
+#header .userBox .top {
+    display: flex;
+    height: 48px;
+}
+
+#header .userBox .profilePicWrap {
+    width: 48px;
+    height: 48px;
+}
+
+#header .userBox .profilePicWrap img {
+    width: 100%;
+    height: 100%;
+}
+
+#header .userBox .userManageWrap {
+    margin-left: 8px;
+    width: calc(100% - 48px - 10px);
+    height: 100%;
+    line-height: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    // flex-direction: column;
+}
+
+#header .userBox .userManageWrap span {
+    width: 100%;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    font-weight: bold;
+    flex-shrink: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #000;
+}
+
+#header .userManageWrap a {
+    font-size: 12px;
+    margin: 0;
+    line-height: 12px;
+    color: #000;
+}
+
+#header .userManageWrap a.manage::after {
+    content: '';
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    margin: 0 8px;
+    overflow: hidden;
+    // visibility: hidden;
+    background-color: #000;
+}
+
+#header .userBox .bottom {
+    height: 30px;
+    border: 1px solid #f0eff2;
+    border-radius: 12px;
+}
+
+#header .userBox .bottom a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    color: #000;
+    margin: 0;
+}
+
+//导航的容器是#siteNav, siteNav在header里居中.
+#header #siteNav {
+    box-sizing: border-box;
+    padding: 0 80px;
+    width: 100%;
+    max-width: 1760px;
+    height: 100%;
+    line-height: $lineHeight;
+    display: flex;
+    justify-content: space-between; //平分宽度, 两端没距离
+    // background-color: pink;
+}
+
+#header #siteNav.style2 {
+    box-sizing: border-box;
+    padding: 0 48px;
+    width: 100%;
+    max-width: none;
+    min-width: 1280px;
+    height: 100%;
+    line-height: $lineHeight;
+    display: flex;
+    justify-content: space-between; //平分宽度, 两端没距离
+    // background-color: lightblue;
+}
+
+//ul没有固定宽度, 由li撑开.
+//给第一级ul加弹性盒, 若没有> 就会变成给所有ul加, 有些Li下有ul, 样式会的变得奇怪.
+#header #siteNav>ul {
+    //宽高都不写, 由内容撑开.
+    display: flex;
+}
+
+//所有li有固定的样式.
+#header #siteNav>ul>li {
+    padding: 0 6px;
+    //li的宽度不写 由内容撑开.
+    height: $lineHeight;
+    display: flex;
+    align-items: center;
+    //li里的内容不压缩.
+    flex-shrink: 0;
+}
+
+//图标通用样式
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: 0em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+//头部导航里的 下拉箭头的固定样式.
+#header #siteNav .icon_arrow {
+    width: 12px;
+    height: 6px;
+    // vertical-align: middle;
+}
+
+//左边ul里有3个li里是a, 右边ul里所有li都有 a, 这些a的有固定的样式.
+#siteNav ul li a {
+    line-height: $lineHeight;
+    margin-right: 7px;
+    font-size: $ft12;
+}
+
+//上面是共有的样式, 下面开始是独有的样式.
+//1.左边的ul
+//左边ul word元素都是span, 且该元素有下拉箭头图标, 让word和图标垂直对齐
+#header .siteNavLeft {
+    // background-color: pink;
+    flex-shrink: 0;
+}
+
+#header .siteNavRight {
+    // background-color: lightblue;
+    flex-shrink: 0;
+}
+
+.siteNavLeft li .word {
+    font-size: $ft12;
+    line-height: $lineHeight;
+    margin-right: 7px;
+}
+
+#header .siteNavLeft .black {
+    color: #000;
+}
+
+#header .siteNavLeft .plsLogin {
+    color: $primaryColor;
+}
+
+//2.右边ul
+//右边ul里所有li都有a, 除了下拉箭头以外 都写在a里面, 下拉箭头跟a是平级的.
+//所以, 没有下拉箭头的li里只有a.
+.siteNavRight>li>a {
+    display: flex;
+    align-items: center;
+}
+
+//a里有文字和图标的, 给文字加类名word, 这些word有固定的样式.
+.siteNavRight li a .word {
+    font-size: $ft12;
+    line-height: $lineHeight;
+}
+
+.siteNavRight .li3_cart .icon_cart {
+    margin-right: 5px;
+    width: $ft12;
+    height: $ft12;
+    color: $primaryColor;
+}
+
+.siteNavRight .li4_collection .icon_collection {
+    margin-right: 5px;
+    width: $ft12;
+    height: $ft12;
+}
+
+//右边ul, 第7个li,1条竖线.
+.siteNavRight .li7_line {
+    padding: 0 5px !important;
+    font-size: 12px !important;
+    color: #ddd;
+}
+
+//下面是鼠标经过li时li改变颜色, 或者显示菜单 的相关样式.
+//左右两边ul下的 li.listLi加定位, 让菜单刚好显示在li的下面
+#header #siteNav .listLi {
+    position: relative;
+}
+
+#header #siteNav .listLi .list {
+    position: absolute;
+    top: 35px;
+    left: 0;
+    z-index: 5;
+    background-color: white;
+}
+
+// 左边ul里有2个li有菜单, 样式都不同, 要单独写.
+//中国大陆的菜单
+#header #siteNav .siteNavLeft .regionList {
+    width: 250px;
+    height: 270px;
+    border: 1px solid #EEEEEE;
+    padding: 8px 0;
+    overflow: auto;
+    font-size: 12px;
+    color: #000;
+}
+
+#header #siteNav .regionList li {
+    height: 29px;
+    padding-left: 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+}
+
+//选择主题的菜单
+#header #siteNav .siteNavLeft .themeList {
+    width: 292px;
+    height: 358px;
+    overflow: auto;
+
+    //该元素下的字体
+    font-size: 14px;
+    color: #3D3D3D;
+}
+
+#header #siteNav .themeList li {
+    display: flex;
+    width: 128px;
+    // height: 102px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 8px 0 12px 8px;
+}
+
+#header #siteNav .theme a {
+    position: absolute;
+    width: 292px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 14px;
+    background-color: white;
+    color: #000;
+    left: 0;
+    top: 393px;
+}
+
+#siteNav .themeList li:hover {
+    cursor: pointer;
+}
+
+#header #siteNav .themeList img {
+    width: 100%;
+    height: 72px;
+    border-radius: 8px;
+}
+
+#header #siteNav .themeList span {
+    width: 100%;
+    height: 22px;
+    line-height: 22px;
+    margin-top: 8px;
+}
+
+//右边ul里有5个li有菜单, 这些菜单的样式都一样, 可以统一写.
+.siteNavRight .listLi .list {
+    padding: 8px 0;
+    border: 1px solid #EEEEEE;
+}
+
+.siteNavRight .listLi .list>li {
+    padding: 0 5px;
+    height: 28px;
+    line-height: 28px;
+    text-align: left;
+}
+
+.siteNavRight .listLi .list li:hover {
+    background-color: #f5f5f5;
+}
+
+//header里有大量 鼠标经过时改变 文字颜色的元素, 给这些元素添加同一个类名, 方便改颜色. 减少代码.
+#header #siteNav .hoverColor:hover {
+    color: $primaryColor;
+}
+
+#header #siteNav .hoverColorLi:hover .hoverColor {
+    color: $primaryColor;
+}
+
+//鼠标经过有菜单的li时显示菜单
+#header #siteNav .listLi:hover {
+    background-color: white;
+}
+
+#header #siteNav .listLi:hover .displayNone {
+    display: block;
+}
